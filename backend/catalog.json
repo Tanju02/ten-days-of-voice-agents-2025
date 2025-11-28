@@ -1,0 +1,151 @@
+{
+  "store_name": "GrocyMate",
+  "categories": {
+    "groceries": {
+      "name": "Groceries",
+      "items": [
+        {
+          "id": "g_bread_01",
+          "name": "Whole Wheat Bread",
+          "brand": "BrownBake",
+          "size": "400g",
+          "price": 45,
+          "tags": ["vegetarian"],
+          "category": "groceries"
+        },
+        {
+          "id": "g_milk_01",
+          "name": "Toned Milk",
+          "brand": "Amul",
+          "size": "1L",
+          "price": 62,
+          "tags": ["vegetarian"],
+          "category": "groceries"
+        },
+        {
+          "id": "g_rice_01",
+          "name": "Basmati Rice",
+          "brand": "Daawat",
+          "size": "1kg",
+          "price": 120,
+          "tags": ["vegan", "gluten-free"],
+          "category": "groceries"
+        }
+      ]
+    },
+
+    "snacks": {
+      "name": "Snacks",
+      "items": [
+        {
+          "id": "s_chips_01",
+          "name": "Salted Potato Chips",
+          "brand": "Lays",
+          "size": "90g",
+          "price": 20,
+          "tags": ["vegetarian"],
+          "category": "snacks"
+        },
+        {
+          "id": "s_biscuits_01",
+          "name": "Marie Gold Biscuits",
+          "brand": "Britannia",
+          "size": "200g",
+          "price": 30,
+          "tags": ["vegetarian"],
+          "category": "snacks"
+        }
+      ]
+    },
+
+    "ready_to_eat": {
+      "name": "Ready to Eat",
+      "items": [
+        {
+          "id": "r_maggi_01",
+          "name": "Masala Noodles",
+          "brand": "Maggi",
+          "size": "70g",
+          "price": 15,
+          "tags": ["vegetarian"],
+          "category": "ready_to_eat"
+        },
+        {
+          "id": "r_pasta_01",
+          "name": "Penne Pasta",
+          "brand": "Barilla",
+          "size": "500g",
+          "price": 160,
+          "tags": ["vegan"],
+          "category": "ready_to_eat"
+        },
+        {
+          "id": "r_sauce_01",
+          "name": "Tomato Pasta Sauce",
+          "brand": "Del Monte",
+          "size": "400g",
+          "price": 120,
+          "tags": ["vegan"],
+          "category": "ready_to_eat"
+        }
+      ]
+    },
+
+    "beverages": {
+      "name": "Beverages",
+      "items": [
+        {
+          "id": "b_juice_01",
+          "name": "Orange Juice",
+          "brand": "Tropicana",
+          "size": "1L",
+          "price": 110,
+          "tags": ["vegan"],
+          "category": "beverages"
+        },
+        {
+          "id": "b_tea_01",
+          "name": "Loose Tea",
+          "brand": "Tata Tea",
+          "size": "250g",
+          "price": 145,
+          "tags": ["vegetarian"],
+          "category": "beverages"
+        }
+      ]
+    },
+
+    "desserts": {
+      "name": "Sweets & Desserts",
+      "items": [
+        {
+          "id": "d_chocolate_01",
+          "name": "Milk Chocolate Bar",
+          "brand": "Cadbury",
+          "size": "50g",
+          "price": 45,
+          "tags": ["vegetarian"],
+          "category": "desserts"
+        }
+      ]
+    }
+  },
+
+  "recipes": {
+    "pasta_meal": {
+      "name": "Simple Pasta Meal",
+      "serves": 2,
+      "ingredients": ["r_pasta_01", "r_sauce_01"]
+    },
+    "tea": {
+      "name": "Masala Tea",
+      "serves": 2,
+      "ingredients": ["b_tea_01", "g_milk_01"]
+    },
+    "maggi_meal": {
+      "name": "Quick Maggi",
+      "serves": 1,
+      "ingredients": ["r_maggi_01"]
+    }
+  }
+}

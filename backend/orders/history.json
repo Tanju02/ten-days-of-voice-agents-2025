@@ -1,0 +1,10 @@
+{
+  "orders": [
+    {
+      "order_id": "ORD_20251128T141800Z_909ac3",
+      "timestamp": "2025-11-28T14:18:00.832626+00:00",
+      "status": "received",
+      "total": 622.0
+    }
+  ]
+}
