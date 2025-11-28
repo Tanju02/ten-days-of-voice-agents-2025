@@ -1,0 +1,57 @@
+{
+  "ORD_20251128T141800Z_909ac3": {
+    "order_id": "ORD_20251128T141800Z_909ac3",
+    "customer_email": "sara@gmail.com",
+    "customer_name": "Sadakhan",
+    "items": [
+      {
+        "id": "g_milk_01",
+        "name": "Toned Milk",
+        "price": 62,
+        "quantity": 1,
+        "brand": "Amul",
+        "size": "1L"
+      },
+      {
+        "id": "g_rice_01",
+        "name": "Basmati Rice",
+        "price": 120,
+        "quantity": 1,
+        "brand": "Daawat",
+        "size": "1kg"
+      },
+      {
+        "id": "b_juice_01",
+        "name": "Orange Juice",
+        "price": 110,
+        "quantity": 1,
+        "brand": "Tropicana",
+        "size": "1L"
+      },
+      {
+        "id": "r_pasta_01",
+        "name": "Penne Pasta",
+        "price": 160,
+        "quantity": 1,
+        "brand": "Barilla",
+        "size": "500g"
+      },
+      {
+        "id": "r_sauce_01",
+        "name": "Tomato Pasta Sauce",
+        "price": 120,
+        "quantity": 1,
+        "brand": "Del Monte",
+        "size": "400g"
+      }
+    ],
+    "subtotal": 572.0,
+    "delivery_charge": 50.0,
+    "discount": 0.0,
+    "total": 622.0,
+    "status": "received",
+    "timestamp": "2025-11-28T14:18:00.832626+00:00",
+    "delivery_address": "Ahmedabad, Gujarat",
+    "last_updated": "2025-11-28T14:18:21.636968+00:00"
+  }
+}
