@@ -1,0 +1,113 @@
+{
+  "session": {
+    "player_name": "Sara",
+    "current_scene": "intro",
+    "history": [
+      {
+        "from": "intro",
+        "action": "approach_oak",
+        "to": "oak",
+        "time": "2025-11-29T16:51:20.785061Z"
+      },
+      {
+        "from": "oak",
+        "action": "take_amulet",
+        "to": "amulet_taken",
+        "time": "2025-11-29T16:51:48.925489Z"
+      },
+      {
+        "from": "amulet_taken",
+        "action": "speak_spirit",
+        "to": "spirit",
+        "time": "2025-11-29T16:52:13.426176Z"
+      },
+      {
+        "from": "spirit",
+        "action": "accept_quest",
+        "to": "reward",
+        "time": "2025-11-29T16:52:36.590909Z"
+      },
+      {
+        "from": "reward",
+        "action": "end_session",
+        "to": "intro",
+        "time": "2025-11-29T16:53:02.009389Z"
+      }
+    ],
+    "journal": [
+      "You claimed the Heartroot Amulet from the ancient oak.",
+      "Accepted the quest to restore the Echo Flame."
+    ],
+    "inventory": [
+      "Heartroot Amulet"
+    ],
+    "choices_made": [
+      "approach_oak",
+      "take_amulet",
+      "speak_spirit",
+      "accept_quest",
+      "end_session"
+    ],
+    "session_id": "f0c347cd",
+    "started_at": "2025-11-29T16:50:49.309697Z"
+  },
+  "current_scene": {
+    "key": "intro",
+    "title": "The Whispering Edge of the Forest",
+    "description": "Soft moonlight filters through towering ancient trees. Their branches hum with faint whispers\u2014as if the forest itself is alive and listening. Fireflies drift around you in gentle spirals, lighting a narrow path leading deeper into the Grove of Echoes. A faint silver glow pulses between the roots of an old oak in front of you.",
+    "choices": {
+      "approach_oak": {
+        "desc": "Approach the ancient oak with the silver glow.",
+        "result_scene": "oak"
+      },
+      "follow_path": {
+        "desc": "Follow the winding path deeper into Whisperwood.",
+        "result_scene": "path"
+      },
+      "listen_forest": {
+        "desc": "Stand still and listen to the whispers in the air.",
+        "result_scene": "whispers"
+      }
+    }
+  },
+  "journal": [
+    "You claimed the Heartroot Amulet from the ancient oak.",
+    "Accepted the quest to restore the Echo Flame."
+  ],
+  "inventory": [
+    "Heartroot Amulet"
+  ],
+  "history": [
+    {
+      "from": "intro",
+      "action": "approach_oak",
+      "to": "oak",
+      "time": "2025-11-29T16:51:20.785061Z"
+    },
+    {
+      "from": "oak",
+      "action": "take_amulet",
+      "to": "amulet_taken",
+      "time": "2025-11-29T16:51:48.925489Z"
+    },
+    {
+      "from": "amulet_taken",
+      "action": "speak_spirit",
+      "to": "spirit",
+      "time": "2025-11-29T16:52:13.426176Z"
+    },
+    {
+      "from": "spirit",
+      "action": "accept_quest",
+      "to": "reward",
+      "time": "2025-11-29T16:52:36.590909Z"
+    },
+    {
+      "from": "reward",
+      "action": "end_session",
+      "to": "intro",
+      "time": "2025-11-29T16:53:02.009389Z"
+    }
+  ],
+  "last_updated_at": "2025-11-29T16:53:29.299049Z"
+}

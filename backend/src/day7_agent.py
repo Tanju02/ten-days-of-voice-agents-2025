@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Updated DailyMart agent (agent.py)
+Updated GrocyMate agent (agent.py)
 - bcrypt password hashing
 - atomic writes with locks
 - asyncio.to_thread wrappers for blocking I/O
