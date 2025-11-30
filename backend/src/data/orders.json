@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ord_124d84e4f8",
+    "items": [
+      {
+        "product_id": "mug-002",
+        "name": "Matte Black Coffee Mug",
+        "unit_amount": 450,
+        "quantity": 1,
+        "line_total": 450,
+        "currency": "INR"
+      }
+    ],
+    "total": 450,
+    "currency": "INR",
+    "buyer": {},
+    "status": "CONFIRMED",
+    "created_at": "2025-11-30T13:56:19.991403+00:00"
+  }
+]
