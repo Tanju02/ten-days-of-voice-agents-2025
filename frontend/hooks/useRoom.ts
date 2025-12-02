@@ -5,6 +5,7 @@ import { toastAlert } from '@/components/livekit/alert-toast';
 
 export function useRoom(appConfig: AppConfig) {
   const aborted = useRef(false);
+  const currentPlayer = useRef<string | null>(null);  // ⭐ NEW
   const room = useMemo(() => new Room(), []);
   const [isSessionActive, setIsSessionActive] = useState(false);
 
@@ -52,6 +53,7 @@ export function useRoom(appConfig: AppConfig) {
               'X-Sandbox-Id': appConfig.sandboxId ?? '',
             },
             body: JSON.stringify({
+              player_name: currentPlayer.current,   // ⭐ NEW
               room_config: appConfig.agentName
                 ? {
                     agents: [{ agent_name: appConfig.agentName }],
@@ -59,6 +61,7 @@ export function useRoom(appConfig: AppConfig) {
                 : undefined,
             }),
           });
+
           return await res.json();
         } catch (error) {
           console.error('Error fetching connection details:', error);
@@ -68,37 +71,36 @@ export function useRoom(appConfig: AppConfig) {
     [appConfig]
   );
 
-  const startSession = useCallback(() => {
-    setIsSessionActive(true);
+  // ⭐ UPDATED: accepts playerName
+  const startSession = useCallback(
+    (playerName: string) => {
+      currentPlayer.current = playerName; // ⭐ NEW
+      setIsSessionActive(true);
 
-    if (room.state === 'disconnected') {
-      const { isPreConnectBufferEnabled } = appConfig;
-      Promise.all([
-        room.localParticipant.setMicrophoneEnabled(true, undefined, {
-          preConnectBuffer: isPreConnectBufferEnabled,
-        }),
-        tokenSource
-          .fetch({ agentName: appConfig.agentName })
-          .then((connectionDetails) =>
-            room.connect(connectionDetails.serverUrl, connectionDetails.participantToken)
-          ),
-      ]).catch((error) => {
-        if (aborted.current) {
-          // Once the effect has cleaned up after itself, drop any errors
-          //
-          // These errors are likely caused by this effect rerunning rapidly,
-          // resulting in a previous run `disconnect` running in parallel with
-          // a current run `connect`
-          return;
-        }
+      if (room.state === 'disconnected') {
+        const { isPreConnectBufferEnabled } = appConfig;
 
-        toastAlert({
-          title: 'There was an error connecting to the agent',
-          description: `${error.name}: ${error.message}`,
+        Promise.all([
+          room.localParticipant.setMicrophoneEnabled(true, undefined, {
+            preConnectBuffer: isPreConnectBufferEnabled,
+          }),
+          tokenSource
+            .fetch({ agentName: appConfig.agentName })
+            .then((connectionDetails) =>
+              room.connect(connectionDetails.serverUrl, connectionDetails.participantToken)
+            ),
+        ]).catch((error) => {
+          if (aborted.current) return;
+
+          toastAlert({
+            title: 'There was an error connecting to the agent',
+            description: `${error.name}: ${error.message}`,
+          });
         });
-      });
-    }
-  }, [room, appConfig, tokenSource]);
+      }
+    },
+    [room, appConfig, tokenSource]
+  );
 
   const endSession = useCallback(() => {
     setIsSessionActive(false);

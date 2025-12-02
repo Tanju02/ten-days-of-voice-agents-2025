@@ -48,11 +48,12 @@ export function ViewController() {
       {/* Welcome screen */}
       {!isSessionActive && (
         <MotionWelcomeView
-          key="welcome"
-          {...VIEW_MOTION_PROPS}
-          startButtonText={appConfig.startButtonText}
-          onStartCall={startSession}
-        />
+        key="welcome"
+        {...VIEW_MOTION_PROPS}
+        startButtonText={appConfig.startButtonText}
+        onStartCall={(name: string) => startSession(name)}
+      />
+
       )}
       {/* Session view */}
       {isSessionActive && (
